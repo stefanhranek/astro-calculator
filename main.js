@@ -38,11 +38,11 @@ const calculateWeight = (weight, planetName) => {
 }
 
 // Function for handleClickEvent
-let userWeight = document.getElementById("user-weight").value;
-let planetName = document.getElementById("planets").value;
 const button = document.getElementById("calculate-button");
 const handleClickEvent = (e) => {
+    let userWeight = document.getElementById("user-weight").value;
+    let planetName = document.getElementById("planets").value;
     console.log('hmm', userWeight);
+    console.log(userWeight);
+    console.log(planetName);
 }
-
-console.log(planetName)
