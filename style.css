@@ -1,0 +1,43 @@
+:root {
+    --accent-color: #D64E48;
+  }
+
+* {
+    padding: 10px;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #04052E;
+    color: white;
+}
+
+h1 {
+    color: var(--accent-color);
+}
+
+input, select {
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    background: none;
+}
+
+button {
+    background: var(--accent-color);
+    border: none;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-container {
+    display:flex;
+}
+

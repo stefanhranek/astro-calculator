@@ -8,12 +8,18 @@
   <body>
      <!-- Write your markup here  -->
      <h1>I'm an Astro Weight Calculator!</h1>
-     <label for="user-weight">Enter your weight:</label>
-     <input id="user-weight" type="text" placeholder="Weight (lbs)" />
-     <label for="planets">Select a Planet:</label>
-     <select id="planets"></select>
-     <button id="calculate-button" onclick="handleClickEvent()">Calculate!</button>
+     <div class="inputs-container">
+       <section class="input">
+         <label for="user-weight">Enter your weight:</label>
+         <input id="user-weight" type="text" placeholder="Weight (lbs)" />
+       </section>
+       <section class="input">
+         <label for="planets">Select a Planet:</label>
+         <select id="planets"></select>
+       </section>
+     </div>
      <p id="output"></p>
+     <button id="calculate-button" onclick="handleClickEvent()">Calculate!</button>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
