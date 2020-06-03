@@ -16,33 +16,31 @@ let planets = [
 // Populate dropdown menu with planets
 let selectPlanets = document.getElementById("planets");
 
-planets.forEach(planet => {
+planets.forEach((planet) => {
   console.log(planet);
   let el = document.createElement("option");
   el.textContent = planet[0];
-//   el.value = planet[1];
+  //   el.value = planet[1];
   selectPlanets.appendChild(el);
 });
 
 // Calculate weight of planets
 let result = 0;
 const calculateWeight = (weight, planetName) => {
-    let conversion = 0;
-    for (let i = 0; i < planets.length; i++) {
-        if (planets[i][0] === planetName) {
-            conversion = planets[i][1];
-        }
+  let conversion = 0;
+  for (let i = 0; i < planets.length; i++) {
+    if (planets[i][0] === planetName) {
+      conversion = planets[i][1];
     }
-    result = weight * conversion
-    return result;
-}
+  }
+  return weight * conversion;
+};
 
 // Function for handleClickEvent
 const button = document.getElementById("calculate-button");
 const handleClickEvent = (e) => {
-    let userWeight = document.getElementById("user-weight").value;
-    let planetName = document.getElementById("planets").value;
-    console.log('hmm', userWeight);
-    console.log(userWeight);
-    console.log(planetName);
-}
+  let userWeight = document.getElementById("user-weight").value;
+  let planetName = document.getElementById("planets").value;
+  let result = calculateWeight(userWeight, planetName);
+  console.log(planetName, userWeight, result);
+};
