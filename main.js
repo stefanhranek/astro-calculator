@@ -68,3 +68,8 @@ const handleCheckbox = () => {
 };
 
 // Add a custom planet with its multiplier to the dropdown. Add two input fields (one for name, one for multiplier) and a button that once clicked will push a new planet to the dropdown.
+const handleCreatePlanet = () => {
+    let planetForm = document.getElementById("planet-form");
+    let el = document.createElement("input");
+    planetForm.appendChild(el);
+}

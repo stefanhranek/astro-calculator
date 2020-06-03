@@ -24,7 +24,17 @@
        <input id="no-pluto" class="checkbox" type="checkbox" name="no-pluto" onclick="handleCheckbox()" value="no">
        <label for="no-pluto">Don't think <b style="color:#D64E48">Pluto</b> is a planet?</label>
      </div>
-     <button id="custom-planet">Click to Add Your Own Custom Planet</button>
+     <button id="custom-planet" onclick="handleCreatePlanet()">Click to Add Your Own Custom Planet</button>
+     <form id="planet-form" class="inputs-container">
+       <section class="input">
+         <label for="name">Name of Planet:</label>
+         <input name="name" type="text" placeholder="" />
+       </section>
+       <section class="input">
+        <label for="multiplier">Multiplier:</label>
+         <input name="multiplier" type="text" placeholder="" />
+       </section>
+     </form>
      <p id="output"></p>
      <button id="calculate-button" onclick="handleClickEvent()">Calculate!</button>
     <script src="main.js" charset="utf-8"></script>
