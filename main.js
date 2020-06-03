@@ -38,7 +38,6 @@ const handleClickEvent = () => {
   let userWeight = document.getElementById("user-weight").value;
   let planetName = document.getElementById("planets").value;
   let result = calculateWeight(userWeight, planetName);
-  console.log(userWeight)
   if (userWeight == "" || userWeight == 0) {
     document.getElementById(
         "output"

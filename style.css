@@ -86,6 +86,16 @@ input.checkbox {
     height: 25px;
 }
 
+#custom-planet {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    transition: border .3s;
+}
+
+#custom-planet:hover {
+    border: 10px solid var(--accent-color);
+}
+
 .text-accent-color {
     color: var(--accent-color);
 }
