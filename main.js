@@ -37,7 +37,9 @@ const calculateWeight = (weight, planetName) => {
 const handleClickEvent = () => {
   let userWeight = document.getElementById("user-weight").value;
   let planetName = document.getElementById("planets").value;
+  let output = document.getElementById("output");
   let result = calculateWeight(userWeight, planetName);
+  output.style.display = "block";
   if (userWeight == "" || userWeight == 0) {
     document.getElementById(
         "output"
@@ -69,7 +71,12 @@ const handleCheckbox = () => {
 
 // Add a custom planet with its multiplier to the dropdown. Add two input fields (one for name, one for multiplier) and a button that once clicked will push a new planet to the dropdown.
 const handleCreatePlanet = () => {
-    let planetForm = document.getElementById("planet-form");
-    let el = document.createElement("input");
-    planetForm.appendChild(el);
+    let form = document.getElementById("planet-form");
+    if (form.style.display === "flex") {
+        form.style.display = "none";
+        console.log("close")
+      } else {
+        form.style.display = "flex";
+        console.log("open")
+      }
 }

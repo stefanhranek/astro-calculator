@@ -21,7 +21,7 @@ body {
 h1 {
     color: var(--accent-color);
     font-size: 36px;
-    margin: 5%;
+    margin: 4% auto 2%;
 }
 
 input, select {
@@ -30,7 +30,7 @@ input, select {
     background: none;
     color: white;
     width: 33vw;
-    margin: 50px;
+    margin: 10px 50px;
     padding: 10px;
     font-size: 24px;
 }
@@ -38,6 +38,7 @@ input, select {
 label {
     text-align: center;
     font-size: 24px;
+    margin: 0
 }
 
 select {
@@ -51,7 +52,7 @@ button {
     font-weight: bold;
     font-size: 24px;
     border-radius: 5px;
-    margin: 3%
+    margin: 3%;
 }
 
 .input {
@@ -61,11 +62,14 @@ button {
 
 .inputs-container {
     display:flex;
+    margin: 2%;
+    justify-content: space-between;
 }
 
 #output {
-    font-size: 24px;
+    font-size: 30px;
     margin: 3%;
+    display: none;
 }
 
 .no-pluto-section {
@@ -94,6 +98,10 @@ input.checkbox {
 
 #custom-planet:hover {
     border: 10px solid var(--accent-color);
+}
+
+#planet-form {
+    display: none;
 }
 
 .text-accent-color {
