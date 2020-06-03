@@ -38,5 +38,5 @@ const handleClickEvent = () => {
   let userWeight = document.getElementById("user-weight").value;
   let planetName = document.getElementById("planets").value;
   let result = calculateWeight(userWeight, planetName);
-  document.getElementById("output").innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
+  document.getElementById("output").innerHTML = `If you were on <span class="text-accent-color">${planetName}</span>, you would weigh <span class="text-accent-color">${result}lbs</span>!`;
 };
