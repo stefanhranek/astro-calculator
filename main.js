@@ -38,9 +38,16 @@ const handleClickEvent = () => {
   let userWeight = document.getElementById("user-weight").value;
   let planetName = document.getElementById("planets").value;
   let result = calculateWeight(userWeight, planetName);
-  document.getElementById(
-    "output"
-  ).innerHTML = `If you were on <span class="text-accent-color">${planetName}</span>, you would weigh <span class="text-accent-color">${result}lbs</span>!`;
+  console.log(userWeight)
+  if (userWeight == "" || userWeight == 0) {
+    document.getElementById(
+        "output"
+      ).innerHTML = `<span class="text-accent-color">Please enter a valid weight!</span>`;
+  } else {
+      document.getElementById(
+        "output"
+      ).innerHTML = `If you were on <span class="text-accent-color">${planetName}</span>, you would weigh <span class="text-accent-color">${result}lbs</span>!`;
+  }
 };
 
 // Add a checkbox to the application that when checked will remove Pluto as an option in the dropdown list.
@@ -51,13 +58,13 @@ const handleCheckbox = () => {
     for (var i = 0; i < planets.length; i++) {
       if (selectPlanets.options[i].value == "Pluto") selectPlanets.remove(i);
     }
-    console.log("fuck pluto");
+    alert("Pluto has been removed from the list!")
   } else {
     document.querySelector(".checkbox").value = "no";
-    console.log("i tihink pluto is a plent");
     let el = document.createElement("option");
     el.textContent = "Pluto";
     selectPlanets.appendChild(el);
+    alert("Pluto has been added back to the list!")
   }
 };
 
