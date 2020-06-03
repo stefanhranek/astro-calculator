@@ -46,16 +46,18 @@ const handleClickEvent = () => {
 // Add a checkbox to the application that when checked will remove Pluto as an option in the dropdown list.
 const handleCheckbox = () => {
   let checkbox = document.querySelector(".checkbox").value;
-  let planets = document.getElementById("planets");
   if (checkbox === "no") {
     document.querySelector(".checkbox").value = "yes";
     for (var i = 0; i < planets.length; i++) {
-      if (planets.options[i].value == "Pluto") planets.remove(i);
+      if (selectPlanets.options[i].value == "Pluto") selectPlanets.remove(i);
     }
     console.log("fuck pluto");
   } else {
     document.querySelector(".checkbox").value = "no";
     console.log("i tihink pluto is a plent");
+    let el = document.createElement("option");
+    el.textContent = "Pluto";
+    selectPlanets.appendChild(el);
   }
 };
 
