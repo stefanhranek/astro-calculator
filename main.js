@@ -25,6 +25,7 @@ planets.forEach(planet => {
 });
 
 // Calculate weight of planets
+let result = 0;
 const calculateWeight = (weight, planetName) => {
     let conversion = 0;
     for (let i = 0; i < planets.length; i++) {
@@ -32,13 +33,16 @@ const calculateWeight = (weight, planetName) => {
             conversion = planets[i][1];
         }
     }
-    return weight * conversion;
+    result = weight * conversion
+    return result;
 }
 
 // Function for handleClickEvent
+let userWeight = document.getElementById("user-weight").value;
+let planetName = document.getElementById("planets").value;
+const button = document.getElementById("calculate-button");
 const handleClickEvent = (e) => {
-    let userWeight = document.getElementById("user-weight").value;
-    // console.log('test');
+    console.log('hmm', userWeight);
 }
 
-document.getElementById("calculate-button").addEventListener("click", handleClickEvent(e))
+console.log(planetName)
