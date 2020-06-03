@@ -17,15 +17,12 @@ let planets = [
 let selectPlanets = document.getElementById("planets");
 
 planets.forEach((planet) => {
-  console.log(planet);
   let el = document.createElement("option");
   el.textContent = planet[0];
-  //   el.value = planet[1];
   selectPlanets.appendChild(el);
 });
 
 // Calculate weight of planets
-let result = 0;
 const calculateWeight = (weight, planetName) => {
   let conversion = 0;
   for (let i = 0; i < planets.length; i++) {
@@ -37,7 +34,6 @@ const calculateWeight = (weight, planetName) => {
 };
 
 // Function for handleClickEvent
-const button = document.getElementById("calculate-button");
 const handleClickEvent = () => {
   let userWeight = document.getElementById("user-weight").value;
   let planetName = document.getElementById("planets").value;
