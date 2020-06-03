@@ -42,12 +42,12 @@ const handleClickEvent = () => {
   output.style.display = "block";
   if (userWeight == "" || userWeight == 0) {
     document.getElementById(
-        "output"
-      ).innerHTML = `<span class="text-accent-color">Please enter a valid weight!</span>`;
+      "output"
+    ).innerHTML = `<span class="text-accent-color">Please enter a valid weight!</span>`;
   } else {
-      document.getElementById(
-        "output"
-      ).innerHTML = `If you were on <span class="text-accent-color">${planetName}</span>, you would weigh <span class="text-accent-color">${result}lbs</span>!`;
+    document.getElementById(
+      "output"
+    ).innerHTML = `If you were on <span class="text-accent-color">${planetName}</span>, you would weigh <span class="text-accent-color">${result}lbs</span>!`;
   }
 };
 
@@ -59,24 +59,32 @@ const handleCheckbox = () => {
     for (var i = 0; i < planets.length; i++) {
       if (selectPlanets.options[i].value == "Pluto") selectPlanets.remove(i);
     }
-    alert("Pluto has been removed from the list!")
+    output.style.display = "block";
+    document.getElementById(
+      "output"
+    ).innerHTML = `Pluto has been <span class="text-accent-color">removed</span> from the list!`;
   } else {
     document.querySelector(".checkbox").value = "no";
     let el = document.createElement("option");
     el.textContent = "Pluto";
     selectPlanets.appendChild(el);
-    alert("Pluto has been added back to the list!")
+    document.getElementById(
+      "output"
+    ).innerHTML = `Pluto has been <span class="text-accent-color">added back</span> to the list!`;
   }
 };
 
 // Add a custom planet with its multiplier to the dropdown. Add two input fields (one for name, one for multiplier) and a button that once clicked will push a new planet to the dropdown.
-const handleCreatePlanet = () => {
-    let form = document.getElementById("planet-form");
-    if (form.style.display === "flex") {
-        form.style.display = "none";
-        console.log("close")
-      } else {
-        form.style.display = "flex";
-        console.log("open")
-      }
-}
+const handleAddPlanet = () => {};
+
+// Extra: Show / hide the "Custom Planet Form"
+const showHideForm = () => {
+  let form = document.getElementById("planet-form");
+  if (form.style.display === "flex") {
+    form.style.display = "none";
+    console.log("close");
+  } else {
+    form.style.display = "flex";
+    console.log("open");
+  }
+};
