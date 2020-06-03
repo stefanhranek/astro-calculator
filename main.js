@@ -16,7 +16,7 @@ let planets = [
 // Populate dropdown menu with planets
 let selectPlanets = document.getElementById("planets");
 
-planets.forEach((planet) => {
+planets.reverse().forEach((planet) => {
   let el = document.createElement("option");
   el.textContent = planet[0];
   selectPlanets.appendChild(el);
