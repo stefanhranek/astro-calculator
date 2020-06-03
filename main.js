@@ -34,3 +34,11 @@ const calculateWeight = (weight, planetName) => {
     }
     return weight * conversion;
 }
+
+// Function for handleClickEvent
+const handleClickEvent = (e) => {
+    let userWeight = document.getElementById("user-weight").value;
+    // console.log('test');
+}
+
+document.getElementById("calculate-button").addEventListener("click", handleClickEvent(e))
