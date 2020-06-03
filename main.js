@@ -13,12 +13,24 @@ let planets = [
   ["Sun", 27.9],
 ];
 
+// Populate dropdown menu with planets
 let selectPlanets = document.getElementById("planets");
 
 planets.forEach(planet => {
   console.log(planet);
   let el = document.createElement("option");
   el.textContent = planet[0];
-  el.value = planet;
+//   el.value = planet[1];
   selectPlanets.appendChild(el);
 });
+
+// Calculate weight of planets
+const calculateWeight = (weight, planetName) => {
+    let conversion = 0;
+    for (let i = 0; i < planets.length; i++) {
+        if (planets[i][0] === planetName) {
+            conversion = planets[i][1];
+        }
+    }
+    return weight * conversion;
+}
