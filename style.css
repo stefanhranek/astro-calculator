@@ -68,6 +68,24 @@ button {
     margin: 3%;
 }
 
+.no-pluto-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.no-pluto-section label, .no-pluto-section input {
+    width: auto;
+}
+
+input.checkbox {
+    width: 25px; 
+    height: 25px;
+}
+
 .text-accent-color {
     color: var(--accent-color);
 }
