@@ -30,7 +30,7 @@ const calculateWeight = (weight, planetName) => {
       conversion = planets[i][1];
     }
   }
-  return weight * conversion;
+  return (weight * conversion).toFixed(2);
 };
 
 // Function for handleClickEvent
