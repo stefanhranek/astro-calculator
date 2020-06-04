@@ -76,12 +76,27 @@ const handleCheckbox = () => {
 
 // Add a custom planet with its multiplier to the dropdown. Add two input fields (one for name, one for multiplier) and a button that once clicked will push a new planet to the dropdown.
 const handleAddPlanet = () => {
-    let customName = document.getElementById("custom-name").value;
-    let customMultiplier = parseFloat(document.getElementById("custom-multiplier").value);
-    let el = document.createElement("option");
-    planets.push([customName, customMultiplier]);
-    el.textContent = customName;
-    selectPlanets.appendChild(el);
+  let customName = document.getElementById("custom-name").value;
+  let customMultiplier = parseFloat(
+    document.getElementById("custom-multiplier").value
+  );
+  if (
+    customName === "" ||
+    customMultiplier === "" ||
+    isNaN(customMultiplier)
+  ) {
+    console.log("works");
+    output.style.display = "block";
+
+    document.getElementById(
+      "output"
+    ).innerHTML = `<span class="text-accent-color">Please fill out both inputs with appropriate values</span>`;
+    return;
+  }
+  let el = document.createElement("option");
+  planets.push([customName, customMultiplier]);
+  el.textContent = customName;
+  selectPlanets.appendChild(el);
 };
 
 // Extra: Show / hide the "Custom Planet Form"
@@ -89,11 +104,13 @@ const showHideForm = () => {
   let form = document.getElementById("planet-form");
   if (form.style.display === "flex") {
     form.style.display = "none";
-    document.getElementById("custom-planet").innerHTML = "Click to Add Your Own Custom Planet"
+    document.getElementById("custom-planet").innerHTML =
+      "Click to Add Your Own Custom Planet";
     console.log("close");
   } else {
     form.style.display = "flex";
-    document.getElementById("custom-planet").innerHTML = "Click to Close Custom Planet Form"
+    document.getElementById("custom-planet").innerHTML =
+      "Click to Close Custom Planet Form";
     console.log("open");
   }
 };
