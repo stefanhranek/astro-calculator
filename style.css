@@ -38,7 +38,7 @@ input, select {
 label {
     text-align: center;
     font-size: 24px;
-    margin: 0
+    margin: 10px 50px;
 }
 
 select {
@@ -48,7 +48,7 @@ select {
 button {
     background: var(--accent-color);
     border: none;
-    padding: 30px 80px;
+    padding: 20px 60px;
     font-weight: bold;
     font-size: 24px;
     border-radius: 5px;
@@ -76,7 +76,7 @@ button {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 0;
+    margin: 20px 0;
     padding: 0;
     align-items: center;
 }
@@ -109,9 +109,9 @@ input.checkbox {
 }
 
 .add-planet-button {
-    padding: 15px 40px;
+    padding: 20px 40px;
     font-size: 20px;
-    margin: 10px 50px;
+    margin: auto 50px;
 }
 
 .text-accent-color {

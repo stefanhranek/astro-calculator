@@ -89,9 +89,11 @@ const showHideForm = () => {
   let form = document.getElementById("planet-form");
   if (form.style.display === "flex") {
     form.style.display = "none";
+    document.getElementById("custom-planet").innerHTML = "Click to Add Your Own Custom Planet"
     console.log("close");
   } else {
     form.style.display = "flex";
+    document.getElementById("custom-planet").innerHTML = "Click to Close Custom Planet Form"
     console.log("open");
   }
 };
