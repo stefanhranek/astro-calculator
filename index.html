@@ -25,16 +25,17 @@
        <label for="no-pluto">Don't think <b style="color:#D64E48">Pluto</b> is a planet?</label>
      </div>
      <button id="custom-planet" onclick="showHideForm()">Click to Add Your Own Custom Planet</button>
-     <form id="planet-form" class="inputs-container">
+     <div id="planet-form" class="inputs-container">
        <section class="input">
          <label for="name">Name of Planet:</label>
-         <input name="name" type="text" placeholder="" />
+         <input id="custom-name" class="add-planet-input" name="name" type="text" placeholder="" />
        </section>
        <section class="input">
         <label for="multiplier">Multiplier:</label>
-         <input name="multiplier" type="text" placeholder="" />
+         <input id="custom-multiplier" class="add-planet-input" name="multiplier" type="text" placeholder="" />
        </section>
-     </form>
+       <button class="add-planet-button" onclick="handleAddPlanet()">Add Planet</button>
+     </div>
      <p id="output"></p>
      <button id="calculate-button" onclick="handleClickEvent()">Calculate!</button>
     <script src="main.js" charset="utf-8"></script>
