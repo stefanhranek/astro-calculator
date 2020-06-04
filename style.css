@@ -12,10 +12,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(https://free4kwallpapers.com/uploads/originals/2019/08/20/minimal-solar-system--wallpaper.jpg);
+    background-position: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     padding: 10px;
-    background: #04052E;
     max-width: 75%;
+    background: rgba(4, 5, 46, 0.781);
+    border-radius: 50px;
 }
 
 h1 {
@@ -41,8 +52,8 @@ label {
     margin: 10px 50px;
 }
 
-select {
-    background: #04052E;
+select option {
+    background: rgb(69, 69, 71);
 }
 
 button {
